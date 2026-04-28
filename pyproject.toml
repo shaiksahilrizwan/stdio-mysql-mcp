@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stdio-mysql-mcp"
+version = "0.1.0"
+description = "An MCP server for MySQL databases using stdio"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastmcp",
+    "mysql-connector-python"
+]
+
+[project.scripts]
+# This creates the "stdio-mysql-mcp" terminal command
+stdio-mysql-mcp = "stdio_mysql_mcp.server:main"
